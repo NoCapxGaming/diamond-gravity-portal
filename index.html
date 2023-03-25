@@ -36,6 +36,7 @@
 
           <label for="due-date" data-en="Due Date:" data-es="Fecha de Entrega:">Due Date:</label>
           <input type="date" id="due-date" name="due-date" required>
+
         </div>
 
         <div id="garment-container">
@@ -50,17 +51,19 @@
             <label for="garment-color" data-en="Color:" data-es="Color:">Color:</label>
             <input type="text" id="garment-color" name="garment-color[]" required>
 
-            <label for="garment-logo" data-en="Desired Logo:" data-es="Logo Deseado:">Desired Logo:</label>
-            <input type="text" id="garment-logo" name="garment-logo[]" required>
+            <label for="garment-image" data-en="Garment Image:" data-es="Imagen de Prenda:">Garment Image:</label>
+            <input type="file" id="garment-image-1" name="garment-image[]" accept="image/*" required>
+            <img id="garment-image-preview-1" style="max-width: 300px; display: none;">
           </div>
         </div>
-				<button id="add-garment" data-en="Add Garment" data-es="Añadir Prenda">Add Garment</button>
+        <button id="add-garment" data-en="Add Garment" data-es="Añadir Prenda">Add Garment</button>
 
         <button type="submit" data-en="Submit" data-es="Enviar">Submit</button>
       </form>
     </section>
   </main>
-  <script src="app.js"></script>
+  <script src="language.js"></script>
+  <script src="form.js"></script>
 </body>
 <script type="module">
   // Import the functions you need from the SDKs you need
