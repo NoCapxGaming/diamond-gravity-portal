@@ -88,3 +88,14 @@ input:focus:invalid {
   padding: 1rem;
   margin-bottom: 1rem;
 }
+footer {
+  background-color: #87738F;
+  color: #ffffff;
+  font-size: 14px;
+  padding: 10px;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+}

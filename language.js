@@ -1,5 +1,5 @@
 const toggleLanguageBtn = document.getElementById('toggle-language');
-const formLabels = document.querySelectorAll('label, h1, h2, h3, button');
+const formLabels = document.querySelectorAll('label, h1, h2, h3, button, footer');
 
 let language = 'en';
 
