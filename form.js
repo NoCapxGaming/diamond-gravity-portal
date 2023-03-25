@@ -42,10 +42,10 @@ workOrderForm.addEventListener('submit', async (e) => {
   const garments = [];
 
   document.querySelectorAll('.garment').forEach((garmentEl) => {
-    const type = garmentEl.querySelector(`#garment-type-${garmentCount}`).value;
-    const size = garmentEl.querySelector(`#garment-size-${garmentCount}`).value;
-    const color = garmentEl.querySelector(`#garment-color-${garmentCount}`).value;
-    const logo = garmentEl.querySelector(`#garment-logo-${garmentCount}`).files[0];
+    const type = garmentEl.querySelector('[name="garment-type[]"]').value;
+    const size = garmentEl.querySelector('[name="garment-size[]"]').value;
+    const color = garmentEl.querySelector('[name="garment-color[]"]').value;
+    const logo = garmentEl.querySelector('[name="garment-logo[]"]').files[0];
 
     garments.push({
       type,
