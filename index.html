@@ -13,53 +13,53 @@
   </header>
   <main>
     <section>
-      <h2 data-en="Work Order Form" data-es="Formulario de Pedido">Work Order Form</h2>
-      <form action="https://formsubmit.co/diamondgravity.tech@gmail.com" method="POST" id="work-order-form">
-        <div id="client-info">
-          <label for="client-name" data-en="Client Name:" data-es="Nombre del Cliente:">Client Name:</label>
-          <input type="text" id="client-name" name="client-name" required>
+    <h2 data-en="Work Order Form" data-es="Formulario de Pedido">Work Order Form</h2>
+    <form id="work-order-form" method="POST" enctype="multipart/form-data" action="https://formsubmit.co/diamondgravity.tech@gmail.com">
+      <div id="client-info">
+        <label for="client-name" data-en="Client Name:" data-es="Nombre del Cliente:">Client Name:</label>
+        <input type="text" id="client-name" name="client-name" required>
 
-          <label for="client-phone" data-en="Phone:" data-es="Teléfono:">Phone:</label>
-          <input type="tel" id="client-phone" name="client-phone" required>
+        <label for="client-phone" data-en="Phone:" data-es="Teléfono:">Phone:</label>
+        <input type="tel" id="client-phone" name="client-phone" required>
 
-          <label for="client-address" data-en="Address:" data-es="Dirección:">Address:</label>
-          <input type="text" id="client-address" name="client-address" required>
+        <label for="client-address" data-en="Address:" data-es="Dirección:">Address:</label>
+        <input type="text" id="client-address" name="client-address" required>
 
-          <label for="client-city" data-en="City:" data-es="Ciudad:">City:</label>
-          <input type="text" id="client-city" name="client-city" required>
+        <label for="client-city" data-en="City:" data-es="Ciudad:">City:</label>
+        <input type="text" id="client-city" name="client-city" required>
 
-          <label for="client-zip" data-en="ZIP:" data-es="Código Postal:">ZIP:</label>
-          <input type="text" id="client-zip" name="client-zip" required>
+        <label for="client-zip" data-en="ZIP:" data-es="Código Postal:">ZIP:</label>
+        <input type="text" id="client-zip" name="client-zip" required>
 
-          <label for="order-date" data-en="Order Date:" data-es="Fecha de Pedido:">Order Date:</label>
-          <input type="date" id="order-date" name="order-date" required>
+        <label for="order-date" data-en="Order Date:" data-es="Fecha de Pedido:">Order Date:</label>
+        <input type="date" id="order-date" name="order-date" required>
 
-          <label for="due-date" data-en="Due Date:" data-es="Fecha de Entrega:">Due Date:</label>
-          <input type="date" id="due-date" name="due-date" required>
+        <label for="due-date" data-en="Due Date:" data-es="Fecha de Entrega:">Due Date:</label>
+        <input type="date" id="due-date" name="due-date" required>
 
+      </div>
+
+      <div id="garment-container">
+        <div class="garment">
+          <h3 data-en="Garment 1" data-es="Prenda 1">Garment 1</h3>
+          <label for="garment-type" data-en="Garment Type:" data-es="Tipo de Prenda:">Garment Type:</label>
+          <input type="text" id="garment-type" name="garment-type[]" required>
+
+          <label for="garment-size" data-en="Size:" data-es="Talla:">Size:</label>
+          <input type="text" id="garment-size" name="garment-size[]" required>
+
+          <label for="garment-color" data-en="Color:" data-es="Color:">Color:</label>
+          <input type="text" id="garment-color" name="garment-color[]" required>
+
+          <label for="garment-image" data-en="Garment Image:" data-es="Imagen de Prenda:">Garment Image:</label>
+          <input type="file" id="garment-image-1" name="garment-image[]" accept="image/*" required>
+          <img id="garment-image-preview-1" style="max-width: 300px; display: none;">
         </div>
-
-        <div id="garment-container">
-          <div class="garment">
-            <h3 data-en="Garment 1" data-es="Prenda 1">Garment 1</h3>
-            <label for="garment-type" data-en="Garment Type:" data-es="Tipo de Prenda:">Garment Type:</label>
-            <input type="text" id="garment-type" name="garment-type[]" required>
-
-            <label for="garment-size" data-en="Size:" data-es="Talla:">Size:</label>
-            <input type="text" id="garment-size" name="garment-size[]" required>
-
-            <label for="garment-color" data-en="Color:" data-es="Color:">Color:</label>
-            <input type="text" id="garment-color" name="garment-color[]" required>
-
-            <label for="garment-image" data-en="Garment Image:" data-es="Imagen de Prenda:">Garment Image:</label>
-            <input type="file" id="garment-image-1" name="garment-image[]" accept="image/*" required>
-            <img id="garment-image-preview-1" style="max-width: 300px; display: none;">
-          </div>
-        </div>
-        <button id="add-garment" data-en="Add Garment" data-es="Añadir Prenda">Add Garment</button>
-        <button type="submit" data-en="Submit" data-es="Enviar">Submit</button>
-      </form>
-    </section>
+      </div>
+      <button id="add-garment" data-en="Add Garment" data-es="Añadir Prenda">Add Garment</button>
+      <button type="submit" data-en="Submit" data-es="Enviar">Submit</button>
+    </form>
+  </section>
   </main>
   <script src="language.js"></script>
   <script src="form.js"></script>
