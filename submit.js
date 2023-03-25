@@ -25,8 +25,8 @@ workOrderForm.addEventListener('submit', async (e) => {
   try {
     const workOrderData = { clientName, phone, address, city, zip, orderDate, dueDate, garments };
 
-    // Upload work order data to Firebase
-    const response = await fetch('/create-work-order', {
+    // Upload work order data to FormSubmit
+    const response = await fetch('https://formsubmit.co/diamondgravity.tech@gmail.com', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
