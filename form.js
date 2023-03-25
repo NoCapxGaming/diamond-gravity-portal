@@ -67,7 +67,7 @@ workOrderForm.addEventListener('submit', async (e) => {
   };
 
   try {
-    const response = await fetch('/create-work-order', {
+    const response = await fetch('https://formsubmit.co/diamondgravity.tech@gmail.com', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
