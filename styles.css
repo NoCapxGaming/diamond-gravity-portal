@@ -135,3 +135,10 @@ footer p {
     margin-right: 20px;
   }
 }
+
+
+    .my-settings {
+        --cfg-pubkey: '87e5a7c453ff4cfab786';
+        /* all available settings https://uploadcare.github.io/blocks/solutions/file-uploader/#configuration */
+    }
+      

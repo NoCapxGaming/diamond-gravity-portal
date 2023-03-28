@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
-  <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
+  <script src="https://unpkg.com/@uploadcare/blocks@0.17.1/web/file-uploader-inline.min.js" type="module"></script>
+  <link href="https://unpkg.com/@uploadcare/blocks@0.17.1/web/file-uploader-inline.min.css" rel="stylesheet">
   <title>Diamond Gravity</title>
 </head>
 <body>
@@ -59,17 +60,14 @@
         <button id="submit" type="submit" data-en="Submit" data-es="Enviar">Submit</button>
       </form>
     </section>
+    <lr-file-uploader-inline
+      css-src="https://unpkg.com/@uploadcare/blocks@0.17.1/web/file-uploader-inline.min.css"
+      class="my-settings"
+    ></lr-file-uploader-inline>
 
-    <div class="file-upload">
-      <label for="upload" data-en="Upload Image" data-es="Subir Imagen">Upload Image</label>
-      <img id="preview" style="max-width: 300px; display: none;">
-    </div>
-
-    <footer data-en="Send the image directly to diamondgravity.tech@gmail.com if the server is not accepting the image. We accept images up to 1MB maximum. More soon." data-es="Envíe la imagen directamente a diamondgravity.tech@gmail.com si el servidor no acepta la imagen. Aceptamos imágenes de hasta 1MB como máximo. Más pronto.">Send the image directly to diamondgravity.tech@gmail.com if the server is not accepting the image. We accept images up to 1MB maximum. More soon.</footer>
+    <footer data-en="Diamond Gravity Marketing Solutions 2023" data-es="Diamond Gravity Marketing Solutions 2023">Diamond Gravity Marketing Solutions 2023</footer>
   </main>
   <script src="language.js"></script>
   <script src="form.js"></script>
-  <script src="cloudinary.js"></script>
-
 </body>
 </html>

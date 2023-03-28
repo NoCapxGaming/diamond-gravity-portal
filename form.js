@@ -27,4 +27,16 @@ addGarmentBtn.addEventListener('click', (e) => {
   `;
 
   garmentContainer.appendChild(garmentEl);
+
+  uploadcare.registerTab('preview', uploadcareTabEffects)
+
+  UPLOADCARE_LOCALE_TRANSLATIONS = {
+    buttons: {
+      choose: {
+        files: {
+            other: 'UPLOAD LOGO'
+        }
+      }
+    }
+  }
 });
