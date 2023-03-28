@@ -21,8 +21,9 @@ addGarmentBtn.addEventListener('click', (e) => {
     <label for="garment-color" data-en="Color:" data-es="Color:">Color:</label>
     <input type="text" id="garment-color-${garmentCount}" name="garment-color[]" required>
 
-    <label for="garment-logo" data-en="Upload Logo:" data-es="Subir Logo:">Upload Logo:</label>
-    <input type="file" id="garment-logo-${garmentCount}" name="garment-logo[]" accept="image/*">
+    <label for="garment-logo" data-en="Logo:" data-es="Logo:">Logo:</label>
+    <input type="text" id="garment-logo" name="garment-color[]" required>
+
   `;
 
   garmentContainer.appendChild(garmentEl);

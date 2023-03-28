@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
+  <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
   <title>Diamond Gravity</title>
 </head>
 <body>
@@ -14,7 +15,7 @@
   <main>
     <section>
       <h2 data-en="Work Order Form" data-es="Formulario de Pedido">Work Order Form</h2>
-      <form id="work-order-form" method="POST" enctype="multipart/form-data" action="https://mailthis.to/diamondgravity.tech@gmail.com">
+      <form id="work-order-form" method="POST" enctype="multipart/form-data" action="https://mailthis.to/diamondgravity.tech@gmail.com" class="cloudinary-fileupload">
         <div id="client-info">
           <label for="client-name" data-en="Client Name:" data-es="Nombre del Cliente:">Client Name:</label>
           <input type="text" id="client-name" name="name" required>
@@ -49,17 +50,22 @@
             <label for="garment-color" data-en="Color:" data-es="Color:">Color:</label>
             <input type="text" id="garment-color" name="garment-color[]" required>
 
-            <label for="garment-image" data-en="Logo Image:" data-es="Imagen del Logo:">Logo Image:</label>
-            <input type="file" name="garment-image[]" accept="image/*" required>
-            <img id="garment-image-preview-1" style="max-width: 300px; display: block;">
+            <label for="garment-logo" data-en="Logo:" data-es="Logo:">Logo:</label>
+            <input type="text" id="garment-logo" name="garment-color[]" required>
+
           </div>
         </div>
         <button id="add-garment" data-en="Add Garment" data-es="Añadir Prenda">Add Garment</button>
-        <button type="submit" data-en="Submit" data-es="Enviar">Submit</button>
+        <button id="submit" type="submit" data-en="Submit" data-es="Enviar">Submit</button>
       </form>
     </section>
-    <footer data-en="Send the image directly to diamondgravity.tech@gmail.com if the server is not accepting the image. We accept images up to 1MB maximum. More soon." data-es="Envíe la imagen directamente a diamondgravity.tech@gmail.com si el servidor no acepta la imagen. Aceptamos imágenes de hasta 1MB como máximo. Más pronto.">Send the image directly to diamondgravity.tech@gmail.com if the server is not accepting the image. We accept images up to 1MB maximum. More soon.</footer>
 
+    <div class="file-upload">
+      <label for="upload" data-en="Upload Image" data-es="Subir Imagen">Upload Image</label>
+      <img id="preview" style="max-width: 300px; display: none;">
+    </div>
+
+    <footer data-en="Send the image directly to diamondgravity.tech@gmail.com if the server is not accepting the image. We accept images up to 1MB maximum. More soon." data-es="Envíe la imagen directamente a diamondgravity.tech@gmail.com si el servidor no acepta la imagen. Aceptamos imágenes de hasta 1MB como máximo. Más pronto.">Send the image directly to diamondgravity.tech@gmail.com if the server is not accepting the image. We accept images up to 1MB maximum. More soon.</footer>
   </main>
   <script src="language.js"></script>
   <script src="form.js"></script>

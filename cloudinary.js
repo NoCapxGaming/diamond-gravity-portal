@@ -1,34 +1,22 @@
-const cloudinary = require('cloudinary').v2;
+const cloudName = 'YOUR_CLOUD_NAME';
+const uploadPreset = 'YOUR_UPLOAD_PRESET';
+const uploadFolder = 'YOUR_UPLOAD_FOLDER';
 
-// Set up Cloudinary configuration
-cloudinary.config({
-  cloud_name: 'dou2suqxt',
-  api_key: '498339597256129',
-  api_secret: 'nXN_XuXoLWbQKU_9LUe6ngepHr4'
+// Create a new instance of the upload widget with the cloudinary settings
+const myWidget = cloudinary.createUploadWidget({
+  cloudName: 'dou2suqxt',
+  uploadPreset: 'dgworkorders',
+  uploadFolder: 'DGWORKORDERS'
+}, (error, result) => {
+  if (!error && result && result.event === "success") {
+    console.log('Done! Here is the image info: ', result.info);
+    const imagePreview = document.getElementById('preview');
+    imagePreview.src = result.info.secure_url;
+    imagePreview.style.display = 'block';
+  }
 });
 
-// Get file input element
-const fileInput = document.getElementById('logo-image');
-
-// Set up event listener for file input element
-fileInput.addEventListener('change', async () => {
-  // Get file object from file input element
-  const file = fileInput.files[0];
-
-  try {
-    // Upload file to Cloudinary
-    const result = await cloudinary.uploader.upload(file, {
-      folder: 'diamondgravity' // Optional: specify a folder to store the image
-    });
-
-    // Log Cloudinary response
-    console.log(result);
-
-    // Display image preview
-    const imgPreview = document.getElementById('garment-image-preview-1');
-    imgPreview.src = result.secure_url;
-  } catch (err) {
-    // Handle error
-    console.error(err);
-  }
+// Open the widget when the user clicks on the label
+document.querySelector('.file-upload label').addEventListener('click', () => {
+  myWidget.open();
 });
