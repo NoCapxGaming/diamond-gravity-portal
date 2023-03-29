@@ -23,7 +23,7 @@ footer{background-color:#87738F;color:#FFF;font-size:14px;padding:1rem;text-alig
 @media screen and (min-width:600px){form{padding:3rem}.form-section{flex-direction:row;justify-content:space-between;align-items:flex-start}.form-section h3{margin-bottom:2rem}.form-column{flex-basis:48%}.form-column:not(:last-child){margin-right:2%}.form-column input{margin-bottom:2rem}.file-upload{flex-direction:row;justify-content:center}.file-upload label{margin-right:2rem}}
 #logo {
   width: 100px;
-  height: auto;
+  height: 60px;
 }
 
 .my-settings {
