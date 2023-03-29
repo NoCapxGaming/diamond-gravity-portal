@@ -6,28 +6,26 @@
   <link rel="stylesheet" href="styles.css">
   <script src="https://unpkg.com/@uploadcare/blocks@0.17.1/web/file-uploader-inline.min.js" type="module"></script>
   <link href="https://unpkg.com/@uploadcare/blocks@0.17.1/web/file-uploader-inline.min.css" rel="stylesheet">
-  <script>
-UPLOADCARE_PUB_KEY = 'your-public-key-goes-here';
-</script>
-<script charset="utf-8" src="https://ucarecdn.com/libs/widget/3.x/uploadcare.full.min.js"></script>
-
+  <script charset="utf-8" src="https://ucarecdn.com/libs/widget/3.x/uploadcare.full.min.js"></script>
   <title>Diamond Gravity</title>
 </head>
 <body>
   <header>
-    <h1 data-en="Diamond Gravity" data-es="Diamond Gravity">Diamond Gravity</h1>
+    <img id="logo" src="images/logo.png" alt="Diamond Gravity Logo">
     <button id="toggle-language">English</button>
   </header>
   <main>
     <section>
       <h2 data-en="Work Order Form" data-es="Formulario de Pedido">Formulario de Pedido</h2>
       <!-- Add Uploadcare file uploader element -->
-      <h2 data-en="1. LOGO" data-es="1. LOGO">1. LOGO</h2>
+      <h2 data-en="1. LOGO" data-es="1. LOGO" style="Color: black">1. LOGO</h2>
+      <h3 data-en="UPLOAD YOUR LOGO PIC" data-es="SUBE TU LOGO">1. LOGO</h3>
+
       <lr-file-uploader-inline
         css-src="https://unpkg.com/@uploadcare/blocks@0.17.1/web/file-uploader-inline.min.css"
         class="my-settings"
       ></lr-file-uploader-inline>
-      <h2 data-en="2. INFO" data-es="2. INFO">2. INFO</h2>
+      <h2 data-en="2. INFO" data-es="2. INFO" style="Color: black">2. INFO</h2>
       <form id="work-order-form" method="POST" enctype="multipart/form-data" action="https://formkeep.com/f/f2f92747abd6">
         <div class="form-section">
           <h3 data-en="Client Info" data-es="Información del Cliente">Información del Cliente</h3>

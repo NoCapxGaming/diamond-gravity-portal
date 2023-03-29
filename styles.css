@@ -2,6 +2,7 @@ body{font-family:Arial,sans-serif;background-color:#f8f8f8;margin:0;padding:0}
 header{display:flex;justify-content:space-between;align-items:center;padding:1rem;background-color:#87738F;color:#fff}
 header h1{margin:0;font-size:1.5rem;font-weight:bold}
 h2{text-align:center;margin-top:2rem;margin-bottom:1rem;font-size:2rem;color:#87738F}
+h3{text-align:center;margin-top:2rem;margin-bottom:1rem;font-size:2rem;color:#87738F}
 form{max-width:600px;margin:2rem auto;background-color:#FFF;border-radius:5px;box-shadow:0 0 10px rgba(0,0,0,.1);padding:2rem}
 h3{font-size:1.5rem;margin:0 0 1rem;text-transform:uppercase;color:#87738F}
 label{font-weight:bold;color:#465B36}
@@ -20,6 +21,11 @@ footer{background-color:#87738F;color:#FFF;font-size:14px;padding:1rem;text-alig
 #toggle-language{background-color:#FFF;color:#87738F;padding:.5rem 1rem;border:none;border-radius:3px;font-size:1rem;cursor:pointer;transition:background-color .3s ease}
 #toggle-language:hover{background-color:#CCC}
 @media screen and (min-width:600px){form{padding:3rem}.form-section{flex-direction:row;justify-content:space-between;align-items:flex-start}.form-section h3{margin-bottom:2rem}.form-column{flex-basis:48%}.form-column:not(:last-child){margin-right:2%}.form-column input{margin-bottom:2rem}.file-upload{flex-direction:row;justify-content:center}.file-upload label{margin-right:2rem}}
+#logo {
+  width: 100px;
+  height: auto;
+}
+
 .my-settings {
         --cfg-pubkey: '87e5a7c453ff4cfab786';
         /* all available settings https://uploadcare.github.io/blocks/solutions/file-uploader/#configuration */
