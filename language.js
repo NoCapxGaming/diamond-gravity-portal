@@ -1,7 +1,7 @@
 const toggleLanguageBtn = document.getElementById('toggle-language');
 const formLabels = document.querySelectorAll('label, h1, h2, h3, button, footer');
 
-let language = 'en';
+let language = 'es';
 
 toggleLanguageBtn.addEventListener('click', () => {
   if (language === 'en') {
@@ -16,5 +16,7 @@ function updateLanguage() {
   formLabels.forEach((label) => {
     label.textContent = label.dataset[language];
   });
-  toggleLanguageBtn.textContent = language === 'en' ? 'Español' : 'English';
+  toggleLanguageBtn.textContent = language === 'en' ? 'English' : 'Español';
 }
+
+updateLanguage();

@@ -6,65 +6,78 @@
   <link rel="stylesheet" href="styles.css">
   <script src="https://unpkg.com/@uploadcare/blocks@0.17.1/web/file-uploader-inline.min.js" type="module"></script>
   <link href="https://unpkg.com/@uploadcare/blocks@0.17.1/web/file-uploader-inline.min.css" rel="stylesheet">
+  <script>
+UPLOADCARE_PUB_KEY = 'your-public-key-goes-here';
+</script>
+<script charset="utf-8" src="https://ucarecdn.com/libs/widget/3.x/uploadcare.full.min.js"></script>
+
   <title>Diamond Gravity</title>
 </head>
 <body>
   <header>
     <h1 data-en="Diamond Gravity" data-es="Diamond Gravity">Diamond Gravity</h1>
-    <button id="toggle-language">Español</button>
+    <button id="toggle-language">English</button>
   </header>
   <main>
     <section>
-      <h2 data-en="Work Order Form" data-es="Formulario de Pedido">Work Order Form</h2>
-      <form id="work-order-form" method="POST" enctype="multipart/form-data" action="https://mailthis.to/diamondgravity.tech@gmail.com" class="cloudinary-fileupload">
-        <div id="client-info">
-          <label for="client-name" data-en="Client Name:" data-es="Nombre del Cliente:">Client Name:</label>
-          <input type="text" id="client-name" name="name" required>
+      <h2 data-en="Work Order Form" data-es="Formulario de Pedido">Formulario de Pedido</h2>
+      <!-- Add Uploadcare file uploader element -->
+      <h2 data-en="1. LOGO" data-es="1. LOGO">1. LOGO</h2>
+      <lr-file-uploader-inline
+        css-src="https://unpkg.com/@uploadcare/blocks@0.17.1/web/file-uploader-inline.min.css"
+        class="my-settings"
+      ></lr-file-uploader-inline>
+      <h2 data-en="2. INFO" data-es="2. INFO">2. INFO</h2>
+      <form id="work-order-form" method="POST" enctype="multipart/form-data" action="https://formkeep.com/f/f2f92747abd6">
+        <div class="form-section">
+          <h3 data-en="Client Info" data-es="Información del Cliente">Información del Cliente</h3>
+          <div class="form-column">
+            <label for="client-name" data-en="Name:" data-es="Nombre:">Nombre:</label>
+            <input type="text" id="client-name" name="name" required>
 
-          <label for="client-phone" data-en="Phone:" data-es="Teléfono:">Phone:</label>
-          <input type="tel" id="client-phone" name="phone" required>
+            <label for="client-phone" data-en="Phone:" data-es="Teléfono:">Teléfono:</label>
+            <input type="tel" id="client-phone" name="phone" required>
 
-          <label for="client-address" data-en="Address:" data-es="Dirección:">Address:</label>
-          <input type="text" id="client-address" name="address" required>
+            <label for="client-address" data-en="Address:" data-es="Dirección:">Dirección:</label>
+            <input type="text" id="client-address" name="address">
+          </div>
+          <div class="form-column">
+            <label for="client-city" data-en="City:" data-es="Ciudad:">Ciudad:</label>
+            <input type="text" id="client-city" name="city">
 
-          <label for="client-city" data-en="City:" data-es="Ciudad:">City:</label>
-          <input type="text" id="client-city" name="city" required>
+            <label for="client-zip" data-en="ZIP:" data-es="Código Postal:">Código Postal:</label>
+            <input type="text" id="client-zip" name="zip">
 
-          <label for="client-zip" data-en="ZIP:" data-es="Código Postal:">ZIP:</label>
-          <input type="text" id="client-zip" name="zip" required>
+            <label for="order-date" data-en="Order Date:" data-es="Fecha de Pedido:">Fecha de Pedido:</label>
+            <input type="date" id="order-date" name="order-date" required>
 
-          <label for="order-date" data-en="Order Date:" data-es="Fecha de Pedido:">Order Date:</label>
-          <input type="date" id="order-date" name="order-date" required>
-
-          <label for="due-date" data-en="Due Date:" data-es="Fecha de Entrega:">Due Date:</label>
-          <input type="date" id="due-date" name="due-date" required>
-        </div>
-        <div id="garment-container">
-          <div class="garment">
-            <h3 data-en="Garment 1" data-es="Prenda 1">Garment 1</h3>
-            <label for="garment-type" data-en="Garment Type:" data-es="Tipo de Prenda:">Garment Type:</label>
-            <input type="text" id="garment-type" name="garment-type[]" required>
-
-            <label for="garment-size" data-en="Size:" data-es="Talla:">Size:</label>
-            <input type="text" id="garment-size" name="garment-size[]" required>
-
-            <label for="garment-color" data-en="Color:" data-es="Color:">Color:</label>
-            <input type="text" id="garment-color" name="garment-color[]" required>
-
-            <label for="garment-logo" data-en="Logo:" data-es="Logo:">Logo:</label>
-            <input type="text" id="garment-logo" name="garment-color[]" required>
-
+            <label for="due-date" data-en="Due Date:" data-es="Fecha de Entrega:">Fecha de Entrega:</label>
+            <input type="date" id="due-date" name="due-date" required>
           </div>
         </div>
+          <div id="garment-container">
+            <div class="form-section">
+              <h3 data-en="Garment Info" data-es="Información de Prenda">Garment Info</h3>
+              <div class="form-column">
+                <label for="garment-type" data-en="Garment Type:" data-es="Tipo de Prenda:">Garment Type:</label>
+                <input type="text" id="garment-type" name="garment-type[]" required>
+
+                <label for="garment-size" data-en="Size:" data-es="Talla:">Size:</label>
+                <input type="text" id="garment-size" name="garment-size[]" required>
+
+                <label for="garment-color" data-en="Color:" data-es="Color:">Color:</label>
+                <input type="text" id="garment-color" name="garment-color[]" required>
+              </div>
+              <div class="form-column">
+                <label for="garment-logo" data-en="Logo: *Name of Image Uploaded*" data-es="Logo: *Nombre de la Imagen Subida*">Logo: *Name of Image Uploaded*</label>
+                <input type="text" id="garment-logo" name="garment-color[]" required>
+              </div>
+            </div>
+          </div>
         <button id="add-garment" data-en="Add Garment" data-es="Añadir Prenda">Add Garment</button>
         <button id="submit" type="submit" data-en="Submit" data-es="Enviar">Submit</button>
       </form>
     </section>
-    <lr-file-uploader-inline
-      css-src="https://unpkg.com/@uploadcare/blocks@0.17.1/web/file-uploader-inline.min.css"
-      class="my-settings"
-    ></lr-file-uploader-inline>
-
     <footer data-en="Diamond Gravity Marketing Solutions 2023" data-es="Diamond Gravity Marketing Solutions 2023">Diamond Gravity Marketing Solutions 2023</footer>
   </main>
   <script src="language.js"></script>
